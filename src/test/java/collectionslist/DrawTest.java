@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DrawTest {
     @Test
-    public void wrongParametersShouldThrowExeption() throws IllegalArgumentException {
+    void wrongParametersShouldThrowExeption() throws IllegalArgumentException {
 
         Exception ex = assertThrows(IllegalArgumentException.class, () -> {
             new Draw().drawNumbers(8, 8);
@@ -17,7 +17,7 @@ class DrawTest {
     }
 
     @Test
-    public void drawnNumbersCountShouldBeEqualToDrawCount() throws IllegalArgumentException {
+    void drawnNumbersCountShouldBeEqualToDrawCount() throws IllegalArgumentException {
         //Given
         int drawCount = 5;
         int maxNumber = 90;

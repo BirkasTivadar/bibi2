@@ -15,7 +15,7 @@ class BookCatalogTest {
     };
 
     @Test
-    public void findSelectedBookInBookList() {
+    void findSelectedBookInBookList() {
         //When
         Book foundBook = new BookCatalog().findBookByTitleAuthor(Arrays.asList(books), "Vuk", "Fekete István");
         //Then
@@ -26,14 +26,14 @@ class BookCatalogTest {
     }
 
     @Test
-    public void bookIsNotInBookList() {
+    void bookIsNotInBookList() {
         Book foundBook = new BookCatalog().findBookByTitleAuthor(Arrays.asList(books), "Vuk", "");
 
         assertEquals(null, foundBook);
     }
 
     @Test
-    public void findSelectedBookInSearchableBookList() {
+    void findSelectedBookInSearchableBookList() {
         //Given
         Book searchingFor = new Book("2121", "Vuk", "Fekete István");
         //When
@@ -43,7 +43,7 @@ class BookCatalogTest {
     }
 
     @Test
-    public void selectedBookIsNotInBookList() {
+    void selectedBookIsNotInBookList() {
         Book searchingFor = new Book("2121", "Vuk", "István");
 
         Book foundBook = new BookCatalog().findBook(Arrays.asList(books), searchingFor);
@@ -52,7 +52,7 @@ class BookCatalogTest {
     }
 
     @Test
-    public void findBookByTitleAndAuthor() {
+    void findBookByTitleAndAuthor() {
         //Given
         Book searchingFor = new Book("Vuk", "Fekete István");
         //When
@@ -62,7 +62,7 @@ class BookCatalogTest {
     }
 
     @Test
-    public void addSameBooksToSet() {
+    void addSameBooksToSet() {
         //Given
         Book[] sameBooks = new Book[]{
                 new Book("1212", "Egri Csillagok", "Gárdonyi Géza"),

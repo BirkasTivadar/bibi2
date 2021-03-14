@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LotteryTest {
     @Test
-    public void wrongParametersShouldThrowExeption() throws IllegalArgumentException {
+    void wrongParametersShouldThrowExeption() throws IllegalArgumentException {
         int lotteryType = 6;
         int ballCount = 6;
 
@@ -20,7 +20,7 @@ class LotteryTest {
     }
 
     @Test
-    public void winningNumbersCountShouldBeEqualToLotteryType() throws IllegalArgumentException {
+    void winningNumbersCountShouldBeEqualToLotteryType() throws IllegalArgumentException {
 
         //Given
         int lotteryType = 5;
